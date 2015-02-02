@@ -3,13 +3,9 @@
  */
 
 $(document).ready(function(){
-    $('#fullpage').fullpage({
-        anchors: ['firstPage', 'secondPage'],
-        scrollOverflow: true
-    });
-
     $('.promo-block').each(function() {
         $(this).css('margin-left', '-'+this.clientWidth / 2+'px');
+        console.log(this.clientWidth, this.clientWidth / 2);
         $(this).css('margin-left', '-'+this.clientWidth / 2+'px');
     });
     $('.cursor, .shop-now').on('click', function() {
@@ -19,4 +15,5 @@ $(document).ready(function(){
         }, 500);
         return false;
     });
+
 });
